@@ -1,16 +1,31 @@
 /**
- * OOPSBannerApp UC1 - OOPS Banner Display Application
+ * OOPSBannerApp UC4 – Render OOPS as Banner using String Array and Loop
  *
- * This class demonstrates a simple Java application that displays the Object
- * Oriented Programming System OOPS acronym to the console.
+ * This version stores banner lines in a String array and prints them
+ * using a loop to improve modularity and readability.
  *
  * @author Developer
- * @version 1.0
+ * @version 4.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        System.out.println("OOPS");
+
+        String[] banner = {
+
+            "  *****     *****    ******     *****  ",
+            " **   **   **   **   **   **   **   ** ",
+            " **   **   **   **   **   **   **      ",
+            " **   **   **   **   ******     *****  ",
+            " **   **   **   **   **             ** ",
+            " **   **   **   **   **       **   **  ",
+            "  *****     *****    **        *****   "
+        };
+
+        // Print banner using loop
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
