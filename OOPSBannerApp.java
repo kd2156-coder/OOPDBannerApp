@@ -1,30 +1,18 @@
-/**
- * OOPSBannerApp UC4 – Render OOPS as Banner using String Array and Loop
- *
- * This version stores banner lines in a String array and prints them
- * using a loop to improve modularity and readability.
- *
- * @author Developer
- * @version 4.0
- */
-
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] banner = {
-
-            "  *****     *****    ******     *****  ",
-            " **   **   **   **   **   **   **   ** ",
-            " **   **   **   **   **   **   **      ",
-            " **   **   **   **   ******     *****  ",
-            " **   **   **   **   **             ** ",
-            " **   **   **   **   **       **   **  ",
-            "  *****     *****    **        *****   "
+        // Inline array initialization using String.join()
+        String[] lines = {
+            String.join(" ", "*****", "*****", "*****"  , "*****"),
+            String.join(" ", "*   *", "*   *", "*   *", "*    "),
+            String.join(" ", "*   *", "*   *", "*****"  , "*****"),
+            String.join(" ", "*   *", "*   *", "*    "  , "    *"),
+            String.join(" ", "*****", "*****", "*    "  , "*****")
         };
 
-        // Print banner using loop
-        for (String line : banner) {
+        // Print banner
+        for (String line : lines) {
             System.out.println(line);
         }
     }
